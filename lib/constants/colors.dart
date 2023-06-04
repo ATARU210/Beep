@@ -12,3 +12,10 @@ class TextColor {
   static const Color wPrimaryColor = Color(0xFF193349);
   static const Color wSecondaryColor = Color(0xFF193349);
 }
+
+class ExtraColors {
+  static const Color primaryColor = Color(0xFFFFFFFF);
+  static const Color secondaryColor = Color(0xFF193349);
+  static const Color wPrimaryColor = Color(0xFF193349);
+  static const Color wSecondaryColor = Color(0xFF193349);
+}
