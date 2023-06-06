@@ -4,38 +4,23 @@ import 'package:flutter/material.dart';
 class Menu extends StatelessWidget {
   Menu({super.key});
 
-  final List<dynamic> data = [
-    {
-      'title': 'Agenda'
-    },
-    {
-      'title': 'Diario'
-    },
-    {
-      'title': 'Metas'
-    },
-    {
-      'title': 'plan de disiplina'
-    }
-  ];
-
   @override
   Widget build(BuildContext context) {
     return (Center(
         child: SizedBox(
-      width: 300, // Ancho deseado del GridView
-      height: 300, // Alto deseado del GridView
-      child: GridView.builder(
-        itemCount: data.length,
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 10,
-          ),
-          itemBuilder: (context, i) {
-            return OptionMenu(
-                title: data[i]["title"]);
-          }),
+      width: 350, // Ancho deseado del GridView
+      height: 350, // Alto deseado del GridView
+      child: GridView.count(
+        crossAxisCount: 2,
+        mainAxisSpacing: 10,
+        crossAxisSpacing: 10,
+        children: const [
+          OptionMenu(title: "Agenda",icon: Icons.calendar_month_outlined, color: Color(0xFF411E9D)),
+          OptionMenu(title: "Diario",icon: Icons.access_alarm_outlined, color: Color(0xFF2E0C8A)),
+          OptionMenu(title: "Metas",icon: Icons.flag, color: Color(0xFF210577)),
+          OptionMenu(title: "Plan de disciplina", icon: Icons.bar_chart_outlined, color: Color(0xFF0E0163)),
+        ],
+      ),
       ),
     ));
   }

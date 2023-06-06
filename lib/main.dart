@@ -13,13 +13,13 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  signInWithGoogle();
+  final user = signInWithGoogle();
 
   FirebaseAuth.instance.authStateChanges().listen((User? user) {
     if (user == null) {
-      print('User is currently signed out!');
+      signInWithGoogle();
     } else {
-      print('User is signed in!');
+      print('$user is signed in!');
     }
   });
 
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Beep',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: FontColors.primaryColor),
         useMaterial3: true,
@@ -53,10 +53,25 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: FontColors.primaryColor,
+
           title: Center(
               child: Text(title,
-                  style: const TextStyle(color: TextColor.primaryColor))),
-          actions: [],
+                  style: const TextStyle(color: FontColors.extraColor))),
+          actions: [
+            IconButton(onPressed: (){}, icon: const Icon(Icons.home, color: FontColors.extraColor))
+            ,
+            Container(padding: const EdgeInsets.all(15),child: GestureDetector(
+              onTap: () {
+                FirebaseAuth.instance.signOut();
+              },
+              child: ClipRRect(
+                  borderRadius: BorderRadius.circular(500),
+                  child: Image.network(
+                      FirebaseAuth.instance.currentUser?.photoURL ?? "",
+                      fit: BoxFit.cover)),
+            ),)
+
+          ],
         ),
         body: Menu());
   }
