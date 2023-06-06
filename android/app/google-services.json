@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "837617362111",
+    "project_id": "beep-5ab63",
+    "storage_bucket": "beep-5ab63.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:837617362111:android:ccdc289f58dadd9127520a",
+        "android_client_info": {
+          "package_name": "vergel.com.beep_aplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "837617362111-mhvgn2lk0fige949ei7losi4i2vq9k8t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vergel.com.beep_aplication",
+            "certificate_hash": "19eaac36c3ed77d1ed250e635520ea1b1f3b0158"
+          }
+        },
+        {
+          "client_id": "837617362111-lo6rorm2slt0gh8g0h1b3h2ajja3oevf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAs1cGSplyIeZ3BCPvvAi-gD2fS_JLCV0M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "837617362111-lo6rorm2slt0gh8g0h1b3h2ajja3oevf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "837617362111-jif50f77vobhcfo6dqgqj7lj7liq0919.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "vergel.com.beepAplication"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
